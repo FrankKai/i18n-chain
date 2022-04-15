@@ -1,0 +1,73 @@
+{
+  "name": "i18n-chain",
+  "displayName": "",
+  "description": "输入中文自动查找多语言key的i18n插件",
+  "version": "0.0.6",
+  "publisher": "frankkai",
+  "icon": "image/logo.png",
+  "engines": {
+    "vscode": "^1.59.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:i18n-chain-ts",
+    "onCommand:i18n-chain-json",
+    "onStartupFinished"
+  ],
+  "repository": "https://github.com/FrankKai/i18n-chain",
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "i18n-chain-ts",
+        "title": "生成多语言代码片段(Typescript文件)"
+      },
+      {
+        "command": "i18n-chain-json",
+        "title": "生成多语言代码片段(JSON文件)"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "i18n-chain",
+      "properties": {
+        "i18n-chain.defaultCmd": {
+          "type": "string",
+          "default": "i18n-chain-json",
+          "description": "二选一 i18n-chain-ts i18n-chain-json"
+        },
+        "i18n-chain.localePath": {
+          "type": "string",
+          "default": "/client/locales/zh",
+          "description": "你的中文多语言路径目录"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "build": "yarn compile && vsce package --no-yarn"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.59.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
+    "mocha": "^8.4.0",
+    "typescript": "^4.3.2",
+    "vscode-test": "^1.5.2"
+  },
+  "dependencies": {
+    "glob": "^7.2.0"
+  }
+}
