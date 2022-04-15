@@ -4,7 +4,9 @@
 通过分析本地项目的多语言文件(js、ts、json)，生成snippet.json，帮助开发者实现多语言快速复用，提升开发效率。
 
 ### 演示图
-![](./image/demo.gif)
+<p align="center">
+  <img src="https://imgur.com/a/DC3bQwy" />
+</p>
 
 
 ### 提供两种方式
