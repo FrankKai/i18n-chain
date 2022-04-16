@@ -1,6 +1,6 @@
 {
   "name": "i18n-chain",
-  "displayName": "",
+  "displayName": "i18n-chain",
   "description": "输入中文自动查找多语言key的i18n插件",
   "version": "0.1.2",
   "publisher": "frankkai",
