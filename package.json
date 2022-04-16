@@ -16,7 +16,15 @@
     "onCommand:i18n-chain-json",
     "onStartupFinished"
   ],
-  "repository": "https://github.com/FrankKai/i18n-chain",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankKai/i18n-chain.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FrankKai/i18n-chain/issues"
+  },
+  "homepage": "https://github.com/FrankKai/i18n-chain#readme",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
