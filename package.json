@@ -60,7 +60,9 @@
     "esbuild": "yarn esbuild-base -- --sourcemap",
     "esbuild-watch": "yarn esbuild-base -- --sourcemap --watch",
     "test-compile": "tsc -p ./",
-    "pretest": "yarn test-compile"
+    "pretest": "yarn test-compile",
+    "build": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",

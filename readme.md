@@ -60,7 +60,7 @@ foo.bar.baz
 
 ### 仅编译
 ```js
-yarn compile
+yarn test-compile
 ```
 ### 生成本地vsix包
 ```js
