@@ -74,7 +74,7 @@ export default async function I18nChainTS() {
     } catch (err) {
       if (err) {
         vscode.window.showErrorMessage("多语言代码片段（TS）生成异常！");
-        const compilerDestroyer = require("./compiler/destroyer");
+        const compilerDestroyer = require("../compiler/destroyer");
         compilerDestroyer(`${rootPath}/.i18n-chain`);
       }
     }
