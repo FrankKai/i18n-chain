@@ -17,7 +17,7 @@
 ### 安装及使用
 
 1. 插件市场搜索i18n-chain，安装即可
-2. 配置多语言文件目录 Preferences->Settings->User->Extensions->i18n-chain(例如，配置Locale Path为：/src/locales/zh)
+2. 配置多语言文件目录 Preferences->Settings->User->Extensions->i18n-chain(例如，配置Locale Path，默认路径为/src/locales/zh)
 3. Command+Shift+P => i18n-json(Locale Path目录中的内容为json文件) 或者 Command+Shift+P => i18n-ts（Locale Path目录中的内容为ts文件）
 4. 键入i18n-后选择需要的链即可。
 

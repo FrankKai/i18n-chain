@@ -53,7 +53,7 @@
         },
         "i18n-chain.localePath": {
           "type": "string",
-          "default": "/client/locales/zh",
+          "default": "/src/locales/zh",
           "description": "你的中文多语言路径目录"
         }
       }

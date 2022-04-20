@@ -15,7 +15,7 @@ export default async function I18nChainTS() {
       // 获取配置文件中的多语言配置
       const userDefinedPath =
         vscode.workspace.getConfiguration().get("i18n-chain.localePath") ||
-        "/client/locales/zh";
+        "/src/locales/zh";
       const localeDir = `${rootPath}${userDefinedPath}`;
       console.log("localeDir", localeDir);
 
