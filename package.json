@@ -12,8 +12,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:i18n-chain-ts",
-    "onCommand:i18n-chain-json",
+    "onCommand:i18n-ts",
+    "onCommand:i18n-json",
     "onStartupFinished"
   ],
   "repository": {
@@ -29,11 +29,11 @@
   "contributes": {
     "commands": [
       {
-        "command": "i18n-chain-ts",
+        "command": "i18n-ts",
         "title": "生成多语言代码片段(Typescript文件)"
       },
       {
-        "command": "i18n-chain-json",
+        "command": "i18n-json",
         "title": "生成多语言代码片段(JSON文件)"
       }
     ],
@@ -41,10 +41,15 @@
       "type": "object",
       "title": "i18n-chain",
       "properties": {
+        "i18n-chain.autoCompile": {
+          "type": "boolean",
+          "default": false,
+          "description": "启动时自动编译"
+        },
         "i18n-chain.defaultCmd": {
           "type": "string",
-          "default": "i18n-chain-json",
-          "description": "二选一 i18n-chain-ts i18n-chain-json"
+          "default": "i18n-json",
+          "description": "二选一 i18n-ts i18n-json"
         },
         "i18n-chain.localePath": {
           "type": "string",

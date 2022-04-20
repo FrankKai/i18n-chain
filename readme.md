@@ -9,19 +9,20 @@
 </p>
 
 
-### 提供两种方式
-- i18n-chain-ts: 适用于locales文件类型为ts file的项目。
-- i18n-chain-json: 适用于locales文件类型为json的项目。
+### 两种方式
+- i18n-json: 适用于locales文件类型为json的项目。
+- i18n-ts: 适用于locales文件类型为ts file的项目。
 
 
-### 安装
+### 安装及使用
 
-1. 安装i18n-chain-0.0.1.vsix
-2. Command+Shift+P => i18n-chain-ts 或者 Command+Shift+P => i18n-chain-json
+1. 插件市场搜索i18n-chain，安装即可
+2. 配置多语言文件目录 Preferences->Settings->User->Extensions->i18n-chain(例如，配置Locale Path为：/src/locales/zh)
+3. Command+Shift+P => i18n-json(Locale Path目录中的内容为json文件) 或者 Command+Shift+P => i18n-ts（Locale Path目录中的内容为ts文件）
+4. 键入i18n-后选择需要的链即可。
 
 
-### 使用
-例如有这样的结构
+例如：
 
 ```json
 {
@@ -31,10 +32,8 @@
 }
 ```
 
-键入i18n-chain-后选择需要的链即可。
-
 ```js
-x-知道了
+i18n-知道了
 ```
 => 
 ```js
@@ -50,6 +49,12 @@ x-知道了
 ```js
 foo.bar.baz
 ```
+
+## FAQ
+### 生成失败
+
+运行命令后，可以查看.vscode目录下的i18n-chain.code-snippets是否有内容。
+没有的话，检查Locale Path配置的目录格式，是否与执行的命令一致。
 
 ## 开发说明
 
