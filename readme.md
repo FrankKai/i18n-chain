@@ -5,7 +5,7 @@
 
 ### 演示图
 <p align="center">
-  <img src="https://imgur.com/EeqhvpZ.gif" />
+  <img src="https://imgur.com/0u4KYRw.gif" />
 </p>
 
 
