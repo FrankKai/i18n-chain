@@ -50,6 +50,11 @@ i18n-知道了
 foo.bar.baz
 ```
 
+## 原理图
+<p align="center">
+  <img src="https://imgur.com/WG7Cc1m.jpeg" />
+</p>
+
 ## FAQ
 ### 生成失败
 
