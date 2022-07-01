@@ -9,11 +9,13 @@
 
 module.exports = (path: string, dir: string, isDir?: boolean) => {
   return new Promise((resolve, reject) => {
-    const tempDir = `/${dir}`;
+    const tempDir = `${dir}`;
     const memfs = require('memfs');
     memfs.fs.writeFileSync(tempDir, '');
     const cp = require('child_process');
 
+    // todo: tsc编译资源到memfs生成的内存目录
+    // 原因：tsc找不到内存中的目录，tsc可能需要disk的目录
     const compileCmd = isDir
       ? `tsc -p ${path} --outDir ${tempDir}`
       : `tsc ${path} --outDir ${tempDir}`;
