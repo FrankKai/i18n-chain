@@ -6,21 +6,24 @@
  * @Description: 编译client/locales/zh下的ts文件为js文件
  * @FilePath: /snake/src/compiler/index.ts
  */
+
 module.exports = (path: string, dir: string, isDir?: boolean) => {
   return new Promise((resolve, reject) => {
-    const cp = require("child_process");
-    cp.exec(`mkdir ${dir}`, () => {
-      const compileCmd = isDir
-        ? `tsc -p ${path} --outDir ${dir}`
-        : `tsc ${path} --outDir ${dir}`;
+    const tempDir = `/${dir}`;
+    const memfs = require('memfs');
+    memfs.fs.writeFileSync(tempDir, '');
+    const cp = require('child_process');
 
-      cp.exec(compileCmd, (err: any) => {
-        resolve(true);
-        if (err) {
-          console.log("compiler err:", err);
-          reject(err);
-        }
-      });
+    const compileCmd = isDir
+      ? `tsc -p ${path} --outDir ${tempDir}`
+      : `tsc ${path} --outDir ${tempDir}`;
+
+    cp.exec(compileCmd, (err: any) => {
+      resolve(true);
+      if (err) {
+        console.log('compiler err:', err);
+        reject(err);
+      }
     });
   });
 };
