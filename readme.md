@@ -1,39 +1,41 @@
+[中文](./README-zh.md)
+
 ## i18n-chain
-**反向选择路径链**多语言vscode插件。
+**Reverse selection path chain** Multilingual vscode plugin.
 
-通过分析本地项目的多语言文件(js、ts、json)，生成snippet.json，帮助开发者实现多语言快速复用，提升开发效率。
+By analyzing the multi-language files (js, ts, json) of the local project, and generating snippet.json, it helps developers to achieve multi-language rapid reuse and improve development efficiency.
 
-### 演示图
+### demo
 <p align="center">
   <img src="https://imgur.com/tO0oXjk.gif" />
 </p>
 
 
-### 两种方式
-- i18n-json: 适用于locales文件类型为json的项目。
-- i18n-ts: 适用于locales文件类型为ts file的项目。
+### two ways
+- i18n-json: For projects with locales file type json.
+- i18n-ts: For projects with locales file type ts file.
 
 
-### 安装及使用
+### installation and use
 
-1. 插件市场搜索i18n-chain，安装即可
-2. 配置多语言文件目录 Preferences->Settings->User->Extensions->i18n-chain(例如，配置Locale Path，默认路径为/src/locales/zh)
-3. Command+Shift+P => i18n-json(Locale Path目录中的内容为json文件) 或者 Command+Shift+P => i18n-ts（Locale Path目录中的内容为ts文件）
-4. 键入i18n-后选择需要的链即可。
+1. Search for i18n-chain in the plugin market and install it
+2. Configure multilingual file directory Preferences->Settings->User->Extensions->i18n-chain (for example, configure Locale Path, the default path is /src/locales/zh)
+3. Command+Shift+P => i18n-json(The content in the Locale Path directory is a json file) or Command+Shift+P => i18n-ts（The content in the Locale Path directory is the ts file）
+4. Type i18n- and select the desired chain。
 
 
-例如：
+E.g：
 
 ```json
 {
-  "foo": "知道了",
-  "foo.bar": "知道了",
-  "foo.bar.baz": "知道了",
+  "foo": "understood",
+  "foo.bar": "understood",
+  "foo.bar.baz": "understood",
 }
 ```
 
 ```js
-i18n-知道了
+i18n-understood
 ```
 => 
 ```js
@@ -50,29 +52,29 @@ i18n-知道了
 foo.bar.baz
 ```
 
-## 原理图
+## Schematic
 <p align="center">
-  <img src="https://imgur.com/WG7Cc1m.jpeg" />
+  <img src="https://imgur.com/FSHTt82.png" />
 </p>
 
 ## FAQ
-### 生成失败
+### Build failed
 
-运行命令后，可以查看.vscode目录下的i18n-chain.code-snippets是否有内容。
-没有的话，检查Locale Path配置的目录格式，是否与执行的命令一致。
+After running the command, you can check whether there is any content in i18n-chain.code-snippets in the .vscode directory.
+If not, check whether the directory format of the Locale Path configuration is consistent with the executed command.
 
-## 开发说明
+## Development Notes
 
-### 开发调试
-- vscode执行Extension
-- 找一个扩展开发宿主项目测试
-- 插件代码有更新时，需要`yarn compile`编译并且点击右上角刷新按钮，保持扩展开发宿主内的插件为最新态
+### Development and debugging
+- vscode executes Extension
+- Find an extension development host project to test
+- When the plugin code is updated, you need to compile it with `yarn compile` and click the refresh button in the upper right corner to keep the plugins in the extension development host up to date
 
-### 仅编译
+### compile only
 ```js
 yarn test-compile
 ```
-### 生成本地vsix包
+### Generate local vsix package
 ```js
 yarn build
 ```
