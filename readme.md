@@ -5,6 +5,9 @@
 
 By analyzing the multi-language files (js, ts, json) of the local project, and generating snippet.json, it helps developers to achieve multi-language rapid reuse and improve development efficiency.
 
+### repo
+https://github.com/FrankKai/i18n-chain
+
 ### demo
 <p align="center">
   <img src="https://imgur.com/tO0oXjk.gif" />

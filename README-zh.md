@@ -5,6 +5,9 @@
 
 通过分析本地项目的多语言文件(js、ts、json)，生成snippet.json，帮助开发者实现多语言快速复用，提升开发效率。
 
+### 仓库
+https://github.com/FrankKai/i18n-chain
+
 ### 演示图
 <p align="center">
   <img src="https://imgur.com/tO0oXjk.gif" />
