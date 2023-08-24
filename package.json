@@ -1,8 +1,8 @@
 {
   "name": "i18n-chain",
   "displayName": "i18n-chain",
-  "description": "输入中文自动查找多语言key的i18n插件",
-  "version": "0.1.9",
+  "description": "%extension.description%",
+  "version": "0.1.12",
   "publisher": "frankkai",
   "icon": "image/logo.png",
   "engines": {
@@ -30,11 +30,11 @@
     "commands": [
       {
         "command": "i18n-ts",
-        "title": "生成多语言代码片段(Typescript文件)"
+        "title": "%extension.commands.i18n-ts.title%"
       },
       {
         "command": "i18n-json",
-        "title": "生成多语言代码片段(JSON文件)"
+        "title": "%extension.commands.i18n-json.title%"
       }
     ],
     "configuration": {
@@ -44,17 +44,17 @@
         "i18n-chain.autoCompile": {
           "type": "boolean",
           "default": false,
-          "description": "启动时自动编译"
+          "description": "%extension.configuration.i18n-chain.autoCompile.title%"
         },
         "i18n-chain.defaultCmd": {
           "type": "string",
           "default": "i18n-json",
-          "description": "二选一 i18n-ts i18n-json"
+          "description": "%extension.configuration.i18n-chain.defaultCmd.title%"
         },
         "i18n-chain.localePath": {
           "type": "string",
           "default": "/src/locales/zh",
-          "description": "你的中文多语言路径目录"
+          "description": "%extension.configuration.i18n-chain.localePath.title%"
         }
       }
     }
@@ -68,7 +68,8 @@
     "pretest": "yarn test-compile",
     "build": "vsce package",
     "vsce:login": "vsce login frankkai",
-    "publish": "vsce publish"
+    "publish": "vsce publish",
+    "patch": "npm version patch"
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",

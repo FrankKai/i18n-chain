@@ -1,0 +1,8 @@
+{
+	"extension.description": "i18n plugin that automatically searches for multi-language keys based on input keywords",
+	"extension.commands.i18n-ts.title": "Generate Multi-Language Code Snippets (TypeScript file)",
+	"extension.commands.i18n-json.title": "Generate Multi-Language Code Snippets (JSON file)",
+	"extension.configuration.i18n-chain.autoCompile.title": "Automatically Compile on Startup",
+	"extension.configuration.i18n-chain.defaultCmd.title": "Choose one: i18n-ts or i18n-json",
+	"extension.configuration.i18n-chain.localePath.title": "Your Multilingual Path Directory"
+}
