@@ -82,3 +82,8 @@ yarn test-compile
 yarn build
 ```
 
+### 发布
+```
+tsc -p ./
+vsce publish
+```

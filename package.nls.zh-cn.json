@@ -1,0 +1,8 @@
+{
+	"extension.description": "输入关键词自动查找多语言key的i18n插件",
+	"extension.commands.i18n-ts.title": "生成多语言代码片段(Typescript文件)",
+	"extension.commands.i18n-json.title": "生成多语言代码片段(JSON文件)",
+	"extension.configuration.i18n-chain.autoCompile.title": "启动时自动编译",
+	"extension.configuration.i18n-chain.defaultCmd.title": "二选一 i18n-ts i18n-json",
+	"extension.configuration.i18n-chain.localePath.title": "你的多语言路径目录"
+}
