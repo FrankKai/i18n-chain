@@ -1,7 +1,10 @@
 {
   "name": "i18n-chain",
   "displayName": "i18n-chain",
-  "description": "输入中文自动查找多语言key的i18n插件",
+  "description": {
+    "en": "i18n plugin that automatically searches for multi-language keys based on input keywords",
+    "zh-cn": "输入关键词自动查找多语言key的i18n插件"
+  },
   "version": "0.1.9",
   "publisher": "frankkai",
   "icon": "image/logo.png",
@@ -30,11 +33,17 @@
     "commands": [
       {
         "command": "i18n-ts",
-        "title": "生成多语言代码片段(Typescript文件)"
+        "title": {
+          "en": "Generate Multi-Language Code Snippets (TypeScript file)",
+          "zh-cn": "生成多语言代码片段(Typescript文件)"
+        }
       },
       {
         "command": "i18n-json",
-        "title": "生成多语言代码片段(JSON文件)"
+        "title": {
+          "en": "Generate Multi-Language Code Snippets (JSON file)",
+          "zh-cn": "生成多语言代码片段(JSON文件)"
+        }
       }
     ],
     "configuration": {
@@ -44,17 +53,26 @@
         "i18n-chain.autoCompile": {
           "type": "boolean",
           "default": false,
-          "description": "启动时自动编译"
+          "description": {
+            "en": "Automatically Compile on Startup",
+            "zh-cn": "启动时自动编译"
+          }
         },
         "i18n-chain.defaultCmd": {
           "type": "string",
           "default": "i18n-json",
-          "description": "二选一 i18n-ts i18n-json"
+          "description": {
+            "en": "Choose one: i18n-ts or i18n-json",
+            "zh-cn": "二选一 i18n-ts i18n-json"
+          }
         },
         "i18n-chain.localePath": {
           "type": "string",
           "default": "/src/locales/zh",
-          "description": "你的中文多语言路径目录"
+          "description": {
+            "en": "Your Multilingual Path Directory",
+            "zh-cn": "你的多语言路径目录"
+          }
         }
       }
     }
