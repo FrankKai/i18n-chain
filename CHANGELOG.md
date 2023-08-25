@@ -4,7 +4,10 @@ All notable changes to the "i18n-chain" extension will be documented in this fil
 
 Check [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/) for recommendations on how to structure this file.
 
-## 0.1.4 - 20220-04-20
+## 0.1.12 - 2023-08-24
+- nls国际化
+
+## 0.1.4 - 2022-04-20
 - 优化使用文档
 - 简化运行命令
 - 支持 启动时是否自动编译
