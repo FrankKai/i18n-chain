@@ -14,8 +14,14 @@ import * as glob from "glob";
  * - 删除临时目录.i18n-chain
  */
 interface ITSDiffData {
-  isHMR?: boolean; // 是否为热更新
-  tempDir: string; // 临时文件
+  /**
+   * @description 是否为热更新
+   */
+  isHMR?: boolean;
+  /**
+   * @description 临时文件
+   */
+  tempDir: string;
 }
 const CACHE_MAP = new Map();
 

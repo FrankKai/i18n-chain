@@ -10,7 +10,10 @@ clearRequireCache();
 `;
 
 interface IGetNoCacheFile {
-  pathname?: string; // 文件路径
+  /**
+   * @description 文件路径
+   */
+  pathname?: string;
 }
 
 export const getNoCacheFile = (props: IGetNoCacheFile) => {

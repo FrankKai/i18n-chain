@@ -1,13 +1,18 @@
 import type { VisualItem } from "./type";
 
 interface TReporter {
+  /**
+   * @description 数据
+   */
   data: Object;
+  /**
+   * @description 需要处理的文件类型
+   */
   type?: "js" | "json";
-  isHMR?: boolean;
 }
 
 module.exports = (props: TReporter) => {
-  const { data, type = "js", isHMR = false } = props;
+  const { data, type = "js" } = props;
   /**
    * 多语言重复检测
    * 1.中文作为key
