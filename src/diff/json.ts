@@ -11,9 +11,18 @@ import { start, end } from "../benchmark";
  * - 根据最新的对象，生成全新的i18n-chain.code-snippets
  */
 interface IJsonDiffData {
-  hmrUrl?: string; // 热更新链接
-  isHMR?: boolean; // 是否为热更新
-  files: string[]; // 文件数组
+  /**
+   * @description 热更新链接
+   */
+  hmrUrl?: string;
+  /**
+   * @description 是否为热更新
+   */
+  isHMR?: boolean;
+  /**
+   * @description 文件数组
+   */
+  files: string[];
 }
 const CACHE_MAP = new Map();
 

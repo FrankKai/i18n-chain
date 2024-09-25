@@ -1,11 +1,26 @@
 import * as vscode from "vscode";
 
 interface IHMR {
-  pathname: string; // 监听的目录地址
-  matchRule: string; // 监听的文件类型
-  changeCallback?: CommonVoid<string>; // 文件变化时的执行回调
-  createCallback?: CommonVoid<string>; // 文件创建时的执行回调
-  deleteCallback?: CommonVoid<string>; // 文件删除时的执行回调
+  /**
+   * @description 监听的目录地址
+   */
+  pathname: string;
+  /**
+   * @description 监听的文件类型
+   */
+  matchRule: string;
+  /**
+   * @description 文件变化时的执行回调
+   */
+  changeCallback?: CommonVoid<string>;
+  /**
+   * @description 文件创建时的执行回调
+   */
+  createCallback?: CommonVoid<string>;
+  /**
+   * @description 文件删除时的执行回调
+   */
+  deleteCallback?: CommonVoid<string>;
 }
 
 export const HMR = (props: IHMR) => {
